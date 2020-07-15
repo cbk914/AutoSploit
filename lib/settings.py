@@ -284,7 +284,7 @@ def load_api_keys(unattended=False, path="{}/etc/tokens".format(CUR_DIR)):
 
     # make the directory if it does not exist
     if not os.path.exists(path):
-        os.mkdir(path)
+        os.makedirs(path)
 
     for key in API_KEYS.keys():
         if not os.path.isfile(API_KEYS[key][0]):
